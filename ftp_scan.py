@@ -42,8 +42,8 @@ def main():
     host = options.target_host
     hosts = options.host_file
     # print parser.usage
-    # if (host == None and hosts != None) or (host != None and hosts == None):
-    if host is None or hosts is None:
+    if (host is None and not hosts) or (not host  and hosts is None):
+    # if host is None or hosts is Ni
         print parser.usage
         exit(0)
     attack(host)
